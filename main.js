@@ -1,12 +1,11 @@
 const $= (selector)=>document.querySelector(selector)
 
 
-// Función para cargar la imagen desde la URL y aplicar filtros
+/*  Función para cargar la imagen desde la URL y aplicar los filtros */
 const contenedorMemeUrl = document.querySelector('.contenedor-meme');
 const containMeme = document.querySelector('.contenedor-meme');
 const urlInput = document.querySelector('#url');
 const filtrosInput = document.querySelector('#seleccion-filtros');
-
 const cargarImagen = () => {
     const imageUrl = urlInput.value;
     if (imageUrl) {
@@ -89,7 +88,7 @@ const contTextMemeTop = document.getElementById(`textoSuperior`).addEventListene
 const contTextMemeBot = document.getElementById(`textoInferior`).addEventListener('input', function (e) {
     document.querySelector('.text-bottom-meme').innerText = e.target.value;
 });
-/* no doy mas 01.09hs---- */
+
 const textTopMeme = document.querySelector('.text-top-meme');
 document.getElementById('borrarTextoSup').addEventListener('click', function () {
     textTopMeme.innerText = '';
@@ -118,7 +117,7 @@ textEspaciado.addEventListener('input', filtersText);
 textInterlineado.addEventListener('input', filtersText);
 /* hasta aca son los ajustes para el texto */
 
-/* llamos con el DOM las fuentes */
+/* llamamos con el DOM las fuentes */
 const arial= document.querySelector(`.Arial`)
 const americanT= document.querySelector('.American Tipe Writer'); 
 const andaleM= document.querySelector(`.Andale Mono`);
