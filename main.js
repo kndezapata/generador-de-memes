@@ -130,27 +130,32 @@ const timesN= document.querySelector(`.Times New Roman`)
 
 const fuenteMeme = () => {
     contenedorMeme.style.fontFamily= (text-fuentes.value)
-    /* contenedorMeme.style.fontFamily = `American Tipe Writer(${text-fuentes.value})`
-    contenedorMeme.style.fontFamily = `Andale Mono(${text-fuentes.value})`
-    contenedorMeme.style.fontFamily =   `Comic Sans Ms(${text-fuentes.value})`
-    contenedorMeme.style.fontFamily =  `Helvetica(${text-fuentes.value})`
-    contenedorMeme.style.fontFamily = `Impact(${text-fuentes.value}) `
-    contenedorMeme.style.fontFamily =  `Verdana(${text-fuentes.value})`
-    contenedorMeme.style.fontFamily =  `Impact(${text-fuentes.value})`
-    contenedorMeme.style.fontFamily = `Times New Roman(${text-fuentes.value}) ` */
-
 };
-
-
-/* americanT.addEventListener(`input`, fuenteMeme)
-andaleM.addEventListener(`input`, fuenteMeme)
-comicS.addEventListener(`input`, fuenteMeme)
-helvetica.addEventListener(`input`, fuenteMeme)
-impact.addEventListener(`input`, fuenteMeme)
-verdana.addEventListener(`input`, fuenteMeme)
-timesN.addEventListener(`input`, fuenteMeme) */
 
 $("#text-fuentes").addEventListener("input", (e) => {
     $(".text-top-meme").style.fontFamily= e.target.value
     $(".text-bottom-meme").style.fontFamily= e.target.value
 })
+/* ----------------------------------------------- */
+const fontSize= document.getElementById(`tamanioLetra`)
+
+$(`#tamanioLetra`).addEventListener(`input`, (e) =>{
+    const fontSizeText = e.target.value + "px"
+    $(".text-top-meme").style.fontSize= fontSizeText
+    $(".text-bottom-meme").style.fontSize= fontSizeText
+})
+/* ------------------------------------------------------ */
+
+const modoOscuro = document.querySelector('.menu-controles');
+const asideOscuroImg = document.querySelector('.aside-bar-img');
+const asideOscuroText= document.querySelector('.aside-bar-text');
+const filterSelection= document.querySelector(`.filtros-selection`)
+
+modoOscuro.addEventListener('click', (e) => {
+    if (e.target.classList.contains('boton-fondo')) {
+        modoOscuro.style.backgroundColor = '#202828';
+        asideOscuroImg.style.backgroundColor = '#303939';
+        asideOscuroText.style.backgroundColor = '#303939';
+        filterSelection.style.backgroundColor = '#414C4C';
+    }
+});

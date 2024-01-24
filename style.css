@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .menu-controles {
@@ -113,6 +114,7 @@
     margin-top: 30px;
     background-color: #DAA297;
     padding: 5px;
+    color: #ffff;
 }
 
 .fondo-label{
@@ -138,3 +140,18 @@
     color: #ffff;
     border: 2px #000000 solid ;
 }
+
+.downoaldMeme{
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-family: 'ProggyCleanTTSZBP', sans-serif;
+    border: 2px #000000 solid;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #00CE00;
+}
+
+.downoaldMeme:hover{
+    background-color: #00AA00;
+}
+
