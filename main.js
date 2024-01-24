@@ -159,3 +159,15 @@ modoOscuro.addEventListener('click', (e) => {
         filterSelection.style.backgroundColor = '#414C4C';
     }
 });
+
+
+const botonDescarga = document.getElementById('descarga');
+
+botonDescarga.addEventListener('click', () => {
+    domtoimage.toBlob(document.querySelector('.contenedor-texto-meme'))
+        .then((blob) => {
+            saveAs(blob, 'meme.png');
+        });
+        
+});
+
