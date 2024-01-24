@@ -1,3 +1,6 @@
+const $= (selector)=>document.querySelector(selector)
+
+
 // Función para cargar la imagen desde la URL y aplicar filtros
 const contenedorMemeUrl = document.querySelector('.contenedor-meme');
 const containMeme = document.querySelector('.contenedor-meme');
@@ -13,7 +16,7 @@ const cargarImagen = () => {
 };
 urlInput.addEventListener('input', cargarImagen);
 filtrosInput.addEventListener('change', cargarImagen);
-/* ----------------------------------------------------------- */
+/* ----------------------------es hasta aca------------------------------- */
 
 /* funcion que cambia el menu de texto  y el menu de imagen */
 const toggleMenu = (menuClass) => {
@@ -33,9 +36,9 @@ document.getElementById('boton-imagen').addEventListener('click', () => {
 document.getElementById('boton-texto').addEventListener('click', () => {
     toggleMenu('aside-bar-text');
 });
+/* -----------------------es hasta aca----------------------- */
 
-/* los capturo en el DOM(?) */
-
+/* -------------------------filtros--------------------------- */
 const contenedorMeme = document.querySelector('.contenedor-meme');
 const brillo = document.querySelector('#brightness');
 const opacidad = document.querySelector('#opacity');
@@ -64,6 +67,7 @@ saturado.addEventListener('input', filtersMeme);
 negativo.addEventListener('input', filtersMeme);
 
 filtersMeme();
+/* ---------------------es hasta aca------------------------- */
 
 /* ajustes para el texto */
 const contenedorTextMeme = document.querySelector(`.contenedor-texto-meme`) 
@@ -77,6 +81,7 @@ const contornoOscuro = document.querySelector('#boton-contorno-oscuro');
 const textEspaciado = document.querySelector('#text-espaciado-input');
 const textInterlineado = document.querySelector('#text-interlineado-input');
 const textoMemeSuperior = document.querySelector(`.textoSuperior`)
+/* ----------------------------------------------------------- */
 /* funcion del texto del meme */
 const contTextMemeTop = document.getElementById(`textoSuperior`).addEventListener('input', function (e) {
     document.querySelector('.text-top-meme').innerText = e.target.value;
@@ -95,7 +100,8 @@ document.getElementById('borrarTextoInf').addEventListener('click', function () 
     textBottomMeme.innerText = '';
     
 });
-/* funciones */
+/* ----------------------------------------------------------- */
+
 /* funcion fondo div que contiene el texto-transparente */
 const filtersText = () => {
     if (fondo.checked) { /* valida, esto es de input */
@@ -111,6 +117,40 @@ fondo.addEventListener('input', filtersText);/* con este evento le cambiamos el 
 textEspaciado.addEventListener('input', filtersText);
 textInterlineado.addEventListener('input', filtersText);
 /* hasta aca son los ajustes para el texto */
-/* textoSuperior.addEventListener(`input`, textSup) evento para ocultar el texto superior e inferior */
 
-/* cambios reflejados en github */
+/* llamos con el DOM las fuentes */
+const arial= document.querySelector(`.Arial`)
+const americanT= document.querySelector('.American Tipe Writer'); 
+const andaleM= document.querySelector(`.Andale Mono`);
+const comicS= document.querySelector(`.Comic Sans Ms`)
+const helvetica= document.querySelector(`.Helvetica`)
+const impact= document.querySelector(`.Impact`)
+const verdana= document.querySelector(`.Verdana`)
+const timesN= document.querySelector(`.Times New Roman`)
+
+const fuenteMeme = () => {
+    contenedorMeme.style.fontFamily= (text-fuentes.value)
+    /* contenedorMeme.style.fontFamily = `American Tipe Writer(${text-fuentes.value})`
+    contenedorMeme.style.fontFamily = `Andale Mono(${text-fuentes.value})`
+    contenedorMeme.style.fontFamily =   `Comic Sans Ms(${text-fuentes.value})`
+    contenedorMeme.style.fontFamily =  `Helvetica(${text-fuentes.value})`
+    contenedorMeme.style.fontFamily = `Impact(${text-fuentes.value}) `
+    contenedorMeme.style.fontFamily =  `Verdana(${text-fuentes.value})`
+    contenedorMeme.style.fontFamily =  `Impact(${text-fuentes.value})`
+    contenedorMeme.style.fontFamily = `Times New Roman(${text-fuentes.value}) ` */
+
+};
+
+
+/* americanT.addEventListener(`input`, fuenteMeme)
+andaleM.addEventListener(`input`, fuenteMeme)
+comicS.addEventListener(`input`, fuenteMeme)
+helvetica.addEventListener(`input`, fuenteMeme)
+impact.addEventListener(`input`, fuenteMeme)
+verdana.addEventListener(`input`, fuenteMeme)
+timesN.addEventListener(`input`, fuenteMeme) */
+
+$("#text-fuentes").addEventListener("input", (e) => {
+    $(".text-top-meme").style.fontFamily= e.target.value
+    $(".text-bottom-meme").style.fontFamily= e.target.value
+})
