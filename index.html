@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="menu-controles">
+        <div class="contenedor-titulo">
+            <h1>Generador de Memes</h1>
+        </div>
+        <div class="botones-container">
+            <button class="boton-imagen" id="boton-imagen">
+                <i class="fa-regular fa-image"></i>
+                <h3>Imagen</h3>
+            </button>
+            <button class="boton-texto" id="boton-texto">
+                <i class="fa-solid fa-a"></i>
+                <h3>Texto</h3>
+            </button>
+            <button class="boton-fondo" id="boton-fondo">
+                <i class="fa-regular fa-lightbulb"></i>
+                <h3>Modo Oscuro</h3>
+            </button>
+        </div>
+    </header>
+    <div class="contenedor-editor-meme">
+        <div class="contenedor-texto-meme">
+            <h3 class="text-top-meme">TOP TEXT</h3>
+            <div class="contenedor-meme"></div>
+            <h3 class="text-bottom-meme">BOTTOM TEXT</h3>
+        </div>
+    </div>
+    <aside class="aside-bar-img" id="menu-img">
+        <h4 class="img-filtros">IMAGEN</h4>
+        <div class="image-url">
+            <label for="url" class="url-label">URL</label>
+            <input type="url" name="url" id="url" />
+            <select name="opciones-filtros" id="seleccion-filtros" class="filtros-selection">
+                <option value="Aclarar">Aclarar</option>
+                <option value="Oscurecer">Oscurecer</option>
+                <option value="Diferencia">Diferencia</option>
+                <option value="Luminosidad">Luminosidad</option>
+                <option value="Multiplicar">Multiplicar</option>
+            </select>
+            <label for="color-fondo-meme" class="fondo-label">FONDO</label>
+            <input class="color" type="color" name="color" id="color-fondo-meme" />
+            <h4>FILTROS</h4>
+            <div class="opciones-filtros">
+                <label for="brightness">BRILLO</label>
+                <input class="slider" type="range" name="range" id="brightness" min="0" max="1" step="0.1" value="1">
+            </div>
+            <div class="opciones-filtros">
+                <label for="opacity">OPACIDAD</label>
+                <input class="slider" type="range" name="range" id="opacity" min="0" max="1" step="0.1" value="1">
+            </div>
+            <div class="opciones-filtros">
+                <label for="contrast">CONTRASTE</label>
+                <input class="slider" type="range" name="range" id="contrast" min="0" max="200" step="1" value="100">
+            </div>
+            <div class="opciones-filtros">
+                <label for="blur">DESENFOQUE</label>
+                <input class="slider" type="range" name="range" id="blur" min="0" max="10" step="0.1" value="0">
+            </div>
+            <div class="opciones-filtros">
+                <label for="grayscale">ESCALA DE GRISES</label>
+                <input class="grayscale" type="range" name="range" id="grayscale" min="0" max="100" step="1" value="0">
+            </div>
+            <div class="opciones-filtros">
+                <label for="sepia">SEPIA</label>
+                <input class="sepia" type="range" name="range" id="sepia" min="0" max="100" step="1" value="0">
+            </div>
+            <div class="opciones-filtros">
+                <label for="hue-rotate">HUE</label>
+                <input class="hue-rotate" type="range" name="range" id="hue-rotate" min="0" max="360" step="1" value="0">
+            </div>
+            <div class="opciones-filtros">
+                <label for="saturate">SATURADO</label>
+                <input class="saturate" type="range" name="range" id="saturate" min="0" max="200" step="10" value="100">
+            </div>
+            <div class="opciones-filtros">
+                <label for="invert">NEGATIVO</label>
+                <input class="invert" type="range" name="range" id="invert" min="0" max="1" step="0.1" value="0">
+            </div>
+    </aside>
+    <aside class="aside-bar-text" id="menu-text">
+        <div class="text-superior">
+            <h3>TEXTO</h3>
+        <label for="textoSuperior">Superior</label>
+        <input type="text" name="superior" id="textoSuperior">
+        <input type="checkbox" name="superior" id="aceptarSuperior"> 
+        <button id="borrarTextoSup">sin texto superior</button>
+         </div>
+         <div class="text-inferior">
+            <label for="textoInferior">Inferior</label>
+        <input type="text" name="inferior" id="textoInferior">
+        <input type="checkbox" name="inferior" id="aceptarInferior">
+        <button id="borrarTextoInf">sin texto inferior</button>
+         </div>
+         <div class="text-fonts">
+            <select name="text-fuentes" id="text-fuentes"> <option value="arial">Arial</option>
+                <option value="americanTipeWriter">American typewriter</option>
+                <option value="andaleMono">Andale Mono</option>
+                <option value="comicSansMs">comic sans MS</option>
+                <option value="helvetica">Helvetica</option>
+                <option value="impact">Impact</option>
+                <option value="verdana">Verdana</option>
+                <option value="timesNewRoman">Times new roman</option></select>
+         </div>
+         <div class="text-fontsize">
+                <label for="tamanioLetra"><input type="number" name="text-tamanio" id="tamanioLetra" aria-label="text-tamanio" min="12" value="40"/></label>
+         </div>
+           <div class="text-position-botones">
+                <button class="cambiar-posicion-der"><i class="fa-solid fa-align-left"></i></button>
+                <button class="cambiar-posicion-center"><i class="fa-solid fa-align-center"></i></button>
+                <button class="cambiar-posicion-izq"><i class="fa-solid fa-align-right"></i></button>
+           </div>
+            <div class="text-color-div">
+                <label for="text-color" class="text-color-label">COLOR</label>
+                <input class="text-color" type="color" name="text-color" id="text-color" />
+            </div>
+            <div class="text-fondo-div">
+                <label for="text-fondo" class="text-fondo-label">FONDO</label>
+                <input class="text-color-fondo" type="color" name="text-color" id="text-fondo" />
+                <input type="checkbox" name="checkbox-fondo" id="checkbox-fondo-transparent">
+                <h4>Fondo transparente</h4>
+            </div>
+            <div class="botones-contorno">
+                <button class="boton-contorno-null" id="boton-contorno-null">Ninguno</button>
+                <button class="boton-contorno-claro" id="boton-contorno-claro">Claro</button>
+                <button class="boton-contorno-oscuro" id="boton-contorno-oscuro">Oscuro</button>
+              </div>
+              <div class="text-espaciado">
+                <h4>Espaciado</h4>
+                <input class="text-espaciado-input" type="number" name="number" id="text-espaciado-input">
+              </div>
+              <div class="text-interlineado">
+                <h4>Interlineado</h4>
+                <select name="text-interlineado-input" id="text-interlineado-input">
+                <option value="0.8">0.8</option>
+                <option value="1">1</option>
+                <option value="1.2">1.2</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+                </select>
+              </div>
+    </aside>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+

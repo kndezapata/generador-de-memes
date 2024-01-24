@@ -1,0 +1,140 @@
+
+@import url('https://fonts.cdnfonts.com/css/blrrpix');
+@import url('https://fonts.cdnfonts.com/css/proggy-clean');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-controles {
+    height: 30vh;
+    width: 100%;
+    background-color: #BD7B6F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px #000000 solid ;
+    
+}
+
+.botones-container {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.boton-imagen,
+.boton-texto,
+.boton-fondo {
+    padding: 5px 15px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    background-color: transparent; 
+    color: #ffff;
+    border: 1px solid #ffff;
+    border-radius: 25px;
+    font-family: 'ProggyCleanTTSZBP', sans-serif;
+    text-shadow: 2px 2px 2px #000000;  
+                                                
+}
+
+.boton-imagen,
+.boton-texto{
+    padding: 5px 25px;
+}
+
+.boton-imagen:hover{
+    background-color: rgba(219, 187, 180, 0.534);
+}
+
+.boton-texto:hover{
+    background-color: rgba(219, 187, 180, 0.534);
+}
+
+.boton-fondo:hover{
+    background-color: rgba(219, 187, 180, 0.534);
+    
+}
+.menu-controles h1 {
+    color: #ffff;
+    font-size: 50px;
+    font-family: 'Blrrpix', sans-serif; 
+    text-shadow: 3px 3px 3px #000000;                                        
+}
+.contenedor-editor-meme{
+    background-color: #DAA297;
+    width: 100%;
+    height: 100vh;
+    width: 100%;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    background-image: url(img/nyanCat.gif);
+}
+
+/* contenedor donde vamos a editar el meme */
+.contenedor-texto-meme{
+    width: 300px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffff;
+    object-fit: contain; 
+    overflow: hidden;   
+}
+.contenedor-meme{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.aside-bar-img {
+    width: 200px;
+    background-color: #F7C9BF;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow-y: auto;
+    color: #ffff;
+    border: 2px #000000 solid ;
+}
+
+.filtros-selection{
+    margin-top: 30px;
+    background-color: #DAA297;
+    padding: 5px;
+}
+
+.fondo-label{
+    gap:50px;
+    
+}
+
+.img-filtros{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.aside-bar-text{
+    width: 200px;
+    background-color: #F7C9BF;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow-y: auto;
+    color: #ffff;
+    border: 2px #000000 solid ;
+}
