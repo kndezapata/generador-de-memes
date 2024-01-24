@@ -113,3 +113,4 @@ textInterlineado.addEventListener('input', filtersText);
 /* hasta aca son los ajustes para el texto */
 /* textoSuperior.addEventListener(`input`, textSup) evento para ocultar el texto superior e inferior */
 
+/* cambios reflejados en github */
