@@ -44,7 +44,7 @@
     </div>
    
     <aside class="aside-bar-img" id="menu-img">
-        <button  class="cerrarAside" id="close" aria-label="cerrar ventana"><i class="fa-solid fa-xmark"></i></button>
+        <button  class="cerrarAside" id="close-img" aria-label="cerrar ventana"><i class="fa-solid fa-xmark"></i></button>
         <h4 class="img-filtros">IMAGEN</h4>
         <div class="image-url">
             <label for="url" class="url-label">URL</label>
@@ -97,7 +97,7 @@
             </div>
     </aside>
     <aside class="aside-bar-text" id="menu-text">
-        <button  class="cerrarAside" id="close" aria-label="cerrar ventana"><i class="fa-solid fa-xmark"></i></button>
+        <button  class="cerrarAside" id="close-text" aria-label="cerrar ventana"><i class="fa-solid fa-xmark"></i></button>
         <div class="text-superior">
             <h3>TEXTO</h3>
         <label for="textoSuperior">Superior</label>
@@ -147,11 +147,11 @@
               </div>
               <div class="text-espaciado">
                 <h4>Espaciado</h4>
-                <input class="text-espaciado-input" type="number" name="number" id="text-espaciado-input">
+                <input class="text-espaciado-input" type="number" name="number" id="text-espaciado-input"  min="5" max="50" value="25">
               </div>
               <div class="text-interlineado">
                 <h4>Interlineado</h4>
-                <select name="text-interlineado-input" id="text-interlineado-input">
+                <select class="text-interlineado-input" name="text-interlineado-input" id="text-interlineado-input">
                 <option value="0.8">0.8</option>
                 <option value="1">1</option>
                 <option value="1.2">1.2</option>
@@ -161,7 +161,7 @@
                 </select>
               </div>
     </aside>
-    <script src="main.js"></script>
+    <script src="main.js" async></script>
 </body>
 </html>
 

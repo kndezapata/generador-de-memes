@@ -8,6 +8,11 @@
 	object-fit: contain;
 }
 
+
+
+
+
+
 .menu-controles {
 	height: 30vh;
 	width: 100%;
@@ -15,9 +20,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
-	
 }
+
 
 .botones-container {
 	display: flex;
@@ -255,4 +259,9 @@ input[type="color"]:focus {
 	justify-content: center;
 	border: none;
 	border-radius: 5px;
+}
+
+
+.oculto {
+    display: none;
 }

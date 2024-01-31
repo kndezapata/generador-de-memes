@@ -260,7 +260,7 @@ const agregarBordeClaro = () => {
 	textBottomMeme.style.textShadow =
 		"0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black";
 };
-
+/* hacer algo para que se reinicie el valor asi toma bien esto */
 const agregarBordeOscuro = () => {
 	const textTopMeme = document.querySelector(".text-top-meme");
 	const textBottomMeme = document.querySelector(".text-bottom-meme");
@@ -278,3 +278,51 @@ botonContornoClaro.addEventListener("click", agregarBordeClaro);
 
 const botonContornoOscuro = document.getElementById("boton-contorno-oscuro");
 botonContornoOscuro.addEventListener("click", agregarBordeOscuro);
+
+
+/* funcion para espaciado */
+
+
+const espaciadoTextTop = document.querySelector(".text-top-meme");
+const espaciadoTextBottom = document.querySelector(".text-bottom-meme");
+const espaciadoText = document.getElementById(`text-espaciado-input`);
+
+
+espaciadoText.addEventListener("input", (e) => {
+	const paddingValue = e.target.value + "px";
+	espaciadoTextTop.style.padding = paddingValue; 
+});
+
+espaciadoText.addEventListener("input", (e) => {
+	const paddingValue = e.target.value + "px";
+	espaciadoTextBottom.style.padding = paddingValue;
+});
+
+
+
+/* interlineado */
+
+$("#text-interlineado-input").addEventListener("input", (e) => {
+	$(".text-top-meme").style.lineHeight = e.target.value;
+	$(".text-bottom-meme").style.lineHeight = e.target.value;
+});
+
+
+/* cerrar aside */
+document.addEventListener("DOMContentLoaded", function () {
+	const cerrarPanelImg = document.getElementById("close-img");
+	const cerrarPanelText = document.getElementById("close-text");
+	const asideImg = document.getElementById("menu-img"); 
+	const asideText = document.getElementById("menu-text");
+
+	const ocultarPanelImagen = () => {
+		asideImg.classList.toggle("oculto");
+	}; ``
+
+	const ocultarPanelTexto = () => {
+		asideText.classList.toggle("oculto");
+	};
+
+	cerrarPanelImg.addEventListener("click", ocultarPanelImagen);
+	cerrarPanelText.addEventListener("click", ocultarPanelTexto);
+});
