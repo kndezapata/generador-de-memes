@@ -231,12 +231,8 @@ input[type="color"]:focus {
 	border-radius: 5px;
 }
 
-/* .text-espaciado */
-/* 
-.text-fondo-div{
-    display: flex;
-    justify-content: center;
-} */
+
+
 #remove-background {
 	font-size: 17px;
 	margin-top: 10px;
@@ -264,4 +260,14 @@ input[type="color"]:focus {
 
 .oculto {
     display: none;
+}
+
+.boton-reset{
+	font-size: 17px;
+	margin-top: 10px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #a80507;
+	color: #ffff;
+	border: none;
 }

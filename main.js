@@ -67,6 +67,54 @@ negativo.addEventListener("input", filtersMeme);
 filtersMeme();
 /* ---------------------es hasta aca------------------------- */
 
+/* resetear los filtros */
+
+const resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener("click", () => {
+	// Reiniciar los valores de los filtros de imagen
+	document.getElementById("brightness").value = `100`;
+	document.getElementById("contrast").value = `100`;
+	document.getElementById("blur").value = `0`; 
+	document.getElementById("grayscale").value = `0`;
+	document.getElementById("sepia").value = `0`;
+	document.getElementById("hue-rotate").value = `0`;
+	document.getElementById("saturate").value = `100`;
+	document.getElementById("invert").value = `0`;
+
+	 const containerMeme = document.querySelector(`.contenedor-meme`);
+	containerMeme.style.mixBlendMode = `normal`;
+	const contenedorMeme = document.querySelector(`.contenedor-meme`);
+	contenedorMeme.style.filter = "";
+	const colorInputMeme = document.getElementById(`color-fondo-meme`);
+	colorInputMeme.value =  `#ffffff"`;
+	contenedorMeme.style.backgroundColor = ``; 
+});
+
+
+
+
+/* cambiar filtros del contenedor de memes */
+
+const containerFilters = document.querySelector(`.contenedor-meme`);
+const filtrosContainer = document.getElementById(`seleccion-filtros`);
+
+filtrosContainer.addEventListener("input", (e) => {
+    containerFilters.style.mixBlendMode = e.target.value
+})
+
+/* cambiar fondo del editor de memes */
+const colorInputMeme = document.getElementById("color-fondo-meme");
+const containerMeme = document.querySelector(".contenedor-meme");
+
+colorInputMeme.addEventListener("input", (e) => {
+	const colorSeleccionado = e.target.value;
+	containerMeme.style.backgroundColor = colorSeleccionado;
+});
+
+
+
+
 /* ajustes para el texto */
 const contenedorTextMeme = document.querySelector(`.contenedor-texto-meme`);
 const fondo = document.querySelector("#checkbox-fondo-transparent");
@@ -163,16 +211,23 @@ $(`#tamanioLetra`).addEventListener(`input`, (e) => {
 const modoOscuro = document.querySelector(".menu-controles");
 const asideOscuroImg = document.querySelector(".aside-bar-img");
 const asideOscuroText = document.querySelector(".aside-bar-text");
-const filterSelection = document.querySelector(`.filtros-selection`);
-
+const backgroundOscuro = document.querySelector(`.contenedor-editor-meme`);
+const botonImgShadow= document.querySelector(`.boton-imagen`);
+const botonTextShadow= document.querySelector(`.boton-texto`);
+const botonModoOscuro= document.querySelector(`.boton-fondo`);
 modoOscuro.addEventListener("click", (e) => {
 	if (e.target.classList.contains("boton-fondo")) {
-		modoOscuro.style.backgroundColor = "#202828";
-		asideOscuroImg.style.backgroundColor = "#303939";
-		asideOscuroText.style.backgroundColor = "#303939";
-		filterSelection.style.backgroundColor = "#414C4C";
+		modoOscuro.style.backgroundColor = "#2c2c2c";
+		asideOscuroImg.style.backgroundColor = `#838383`;
+		asideOscuroText.style.backgroundColor = `#838383`;
+		backgroundOscuro.style.backgroundColor = `#585858`;
+		botonImgShadow.style.boxShadow=`0px 0px 4px #ffff`;
+		botonTextShadow.style.boxShadow = `0px 0px 4px #ffff`;
+		botonModoOscuro.style.boxShadow = `0px 0px 4px #ffff`;
+		botonImgShadow.style.hover= `#ffff`
 	}
 });
+
 
 const botonDescarga = document.getElementById("descarga");
 
