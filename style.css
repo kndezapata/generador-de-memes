@@ -2,272 +2,300 @@
 @import url("https://fonts.cdnfonts.com/css/proggy-clean");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	object-fit: contain;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  object-fit: contain;
 }
-
-
-
-
-
 
 .menu-controles {
-	height: 30vh;
-	width: 100%;
-	background-color: #a7a991;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  height: 30vh;
+  width: 100%;
+  background-color: #a7a991;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
 .botones-container {
-	display: flex;
-	gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .boton-imagen,
 .boton-texto,
 .boton-fondo {
-	padding: 5px 20px;
-	font-size: 14px;
-	border: none;
-	cursor: pointer;
-	height: 50px;
-	background-color: transparent;
-	color: #ffff;
-	border: 1px solid #ffff;
-	border-radius: 25px;
-	font-family: "ProggyCleanTTSZBP", sans-serif;
-	text-shadow: 2px 2px 2px #000000;
-	box-shadow: 0px 0px 4px #000000;
-	/* background-color: #a5a797 */
-	border-radius: 5px;
-	border: none;
+  padding: 5px 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  background-color: transparent;
+  color: #ffff;
+  border: 1px solid #ffff;
+  border-radius: 25px;
+  font-family: "ProggyCleanTTSZBP", sans-serif;
+  text-shadow: 2px 2px 2px #000000;
+  box-shadow: 0px 0px 4px #000000;
+  /* background-color: #a5a797 */
+  border-radius: 5px;
+  border: none;
 }
 
 .boton-imagen,
 .boton-texto {
-	padding: 5px 30px;
+  padding: 5px 30px;
 }
 
 .boton-imagen:hover {
-	background-color: #3b3b3b36;
+  background-color: #3b3b3b36;
 }
 
 .boton-texto:hover {
-	background-color: #3b3b3b36;
+  background-color: #3b3b3b36;
 }
 
 .boton-fondo:hover {
-	background-color: #3b3b3b36;
+  background-color: #3b3b3b36;
 }
 .menu-controles h1 {
-	color: #ffff;
-	font-size: 50px;
-	font-family: "Blrrpix", sans-serif;
-	text-shadow: 3px 3px 3px #000000;
+  color: #ffff;
+  font-size: 50px;
+  font-family: "Blrrpix", sans-serif;
+  text-shadow: 3px 3px 3px #000000;
 }
 .contenedor-editor-meme {
-	width: 100%;
-	height: 100vh;
-	width: 100%;
-	padding-top: 1.5rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	object-fit: contain;
-	/*  background-image: url(img/nyanCat.gif); */
-	background-color: #cdc2af;
+  width: 100%;
+  height: 100vh;
+  width: 100%;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: contain;
+  /*  background-image: url(img/nyanCat.gif); */
+  background-color: #cdc2af;
 }
 
 .contenedor-texto-meme {
-	width: 300px;
-	font-weight: bold;
-	text-align: center;
-	background-color: #ffff;
-	object-fit: contain;
+  width: 300px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffff;
+  object-fit: contain;
 }
 .contenedor-meme {
-	width: 300px;
-	height: 300px;
-	background-color: black;
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .filtros-selection {
-	margin-top: 30px;
-	background-color: #daa297;
-	padding: 5px;
-	color: #ffff;
-	border-radius: 5px;
-	border: none;
+  margin-top: 30px;
+  background-color: #daa297;
+  padding: 5px;
+  color: #ffff;
+  border-radius: 5px;
+  border: none;
 }
 
 .fondo-label {
-	gap: 50px;
-	
+  gap: 50px;
 }
 
 .img-filtros {
-	
-	display: flex;
-	justify-content: center;
-	border: none;
+  display: flex;
+  justify-content: center;
+  border: none;
 }
 
 .aside-bar-img,
 .aside-bar-text {
-	max-width: 200px;
-	width: 200px;
-	background-color: #e2e7d3;
-	padding: 20px;
-	position: fixed;
-	top: 0;
-	right: 0;
-	height: 100%;
-	overflow-y: auto;
-	color: black;
-	font-family: "ProggyCleanTTSZBP", sans-serif;
-	font-size: 20px;
-	text-align: center;
-	overflow-y: auto;
-	padding-right: calc(100% - 100vw);
-	
+  max-width: 200px;
+  width: 200px;
+  background-color: #e2e7d3;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow-y: auto;
+  color: black;
+  font-family: "ProggyCleanTTSZBP", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  overflow-y: auto;
+  padding-right: calc(100% - 100vw);
 }
 
 .downoaldMeme {
-	margin-top: 20px;
-	padding: 15px 30px;
-	font-family: "ProggyCleanTTSZBP", sans-serif;
-	border: 1px #000000 solid;
-	font-size: 20px;
-	background-color: #6f9b3c;
-	border-radius: 5px;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-family: "ProggyCleanTTSZBP", sans-serif;
+  border: 1px #000000 solid;
+  font-size: 20px;
+  background-color: #6f9b3c;
+  border-radius: 5px;
 }
 
 .downoaldMeme:hover {
-	background-color: #81b446de;
+  background-color: #81b446de;
 }
 
 .image-url input[type="url"] {
-	width: 80%;
-	border-radius: 5px;
-	border: none;
-	
+  width: 80%;
+  border-radius: 5px;
+  border: none;
 }
 
 .text-superior input[type="text"],
 .text-inferior input[type="text"],
 .text-fondo-label {
-	width: 80%;
-	border-radius: 5px;
-	border: none;
-	border-radius: 5px;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  border-radius: 5px;
 }
 
 .botonInf,
 .botonSup {
-	width: 60px;
-	height: 20px;
-	background-color: #a80507;
-	font-size: 15px;
-	color: #ffff;
-	margin-top: 5px;
-	border: none;
-	border-radius: 5px;
+  width: 60px;
+  height: 20px;
+  background-color: #a80507;
+  font-size: 15px;
+  color: #ffff;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
 }
 
 .inputFontSize {
-	height: 30px;
-	width: 80%;
-	margin-top: 10px;
-	border: none;
-	border-radius: 5px;
+  height: 30px;
+  width: 80%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 .select {
-	height: 30px;
-	width: 80%;
-	margin-top: 10px;
-	border: none;
-	border-radius: 5px;
-
+  height: 30px;
+  width: 80%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 input[type="color"] {
-	width: 80%;
-	height: 30px;
-	border: 1px solid #ccc;
-	background-color: #ffffff;
-	outline: none;
-	border: none;
-	border-radius: 5px;
-
+  width: 80%;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 }
 input[type="color"]:focus {
-	border-color: #000000;
+  border-color: #000000;
 }
 
 .boton-contorno-null,
 .boton-contorno-claro,
 .boton-contorno-oscuro {
-	font-size: 20px;
-	width: 80%;
-	margin-top: 10px;
-	padding: 2px;
-	border: none;
-	background-color: #ffff;
-	border-radius: 5px;
-
+  font-size: 20px;
+  width: 80%;
+  margin-top: 10px;
+  padding: 2px;
+  border: none;
+  background-color: #ffff;
+  border-radius: 5px;
 }
 .text-position-botones {
-	margin-top: 20px;
-	text-align: center;
-	border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 5px;
 }
 
-
-
 #remove-background {
-	font-size: 17px;
-	margin-top: 10px;
-	padding: 5px;
-	border-radius: 5px;
-	background-color: #a80507;
-	color: #ffff;
-	border: none;
+  font-size: 17px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #a80507;
+  color: #ffff;
+  border: none;
 }
 
 .text-espaciado-input {
-	width: 80%;
-	border: none;
-	border-radius: 5px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
 }
 
 #text-interlineado-input {
-	width: 80%;
-	display: flex;
-	justify-content: center;
-	border: none;
-	border-radius: 5px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
 }
-
 
 .oculto {
-    display: none;
+  display: none;
 }
 
-.boton-reset{
-	font-size: 17px;
-	margin-top: 10px;
-	padding: 5px;
-	border-radius: 5px;
-	background-color: #a80507;
-	color: #ffff;
-	border: none;
+.boton-reset {
+  font-size: 17px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #a80507;
+  color: #ffff;
+  border: none;
+}
+
+
+/* Medias querys */
+
+@media only screen and (max-width: 768px) {
+  .meme-card {
+    width: 31%;
+  }
+
+  .image-url {
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .meme-card {
+    width: 48%;
+  }
+  .image-url {
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .meme-card {
+    width: 100%;
+  }
+
+  .boton-imagen,
+  .boton-texto,
+  .boton-fondo {
+    margin-top: -20px;
+  }
+
+  .image-url {
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+  }
 }
